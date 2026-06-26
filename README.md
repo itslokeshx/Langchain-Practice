@@ -1,14 +1,10 @@
 # LangChain Practice 🧠🤖
 
-Welcome to the **LangChain Practice** repository! This is a structured, hands-on playground designed for practicing and mastering the core concepts of Retrieval-Augmented Generation (RAG) pipelines using Python and LangChain.
-
-The repository is organized sequentially, taking you step-by-step from raw data ingestion to vector storage and retrieval.
-
----
+A personal learning playground designed for practicing and mastering the core concepts of Retrieval-Augmented Generation (RAG) pipelines using Python and LangChain.
 
 ## 📂 Repository Structure
 
-The repository is split into clean, sequentially numbered modules:
+The repository is organized sequentially, taking you step-by-step from raw data ingestion to vector storage and retrieval:
 
 ```
 ├── 01_Data_Ingestion/           # Load raw data from PDF, XML, Text, etc.
@@ -27,52 +23,4 @@ The repository is split into clean, sequentially numbered modules:
 │   ├── attention.pdf            # "Attention Is All You Need" research paper
 │   ├── records.xml              # Structured XML test data
 │   └── speech.txt               # Sample historical text speeches
-├── .env.example                 # Template for API keys and environment variables
-├── requirements.txt             # Project Python dependencies
-└── README.md                    # Project documentation
 ```
-
----
-
-## 🛠️ Getting Started
-
-### 1. Clone & Navigate
-```bash
-git clone <your-repo-url>
-cd langchain-practice
-```
-
-### 2. Set Up Virtual Environment
-Create and activate a virtual environment to manage dependencies locally:
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Configure Environment Variables
-Copy the `.env.example` file to `.env` and fill in your API tokens:
-```bash
-cp .env.example .env
-```
-Add your Hugging Face, OpenAI, or Ollama variables:
-```env
-HF_TOKEN=your_huggingface_token_here
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
----
-
-## 📓 Notebook Jupyter Kernel Setup
-
-This repository pre-configures a dedicated Jupyter Kernel pointing to the virtual environment `venv` to avoid package import issues.
-
-If Jupyter does not automatically select it:
-1. Open any notebook (e.g., `huggingface_embeddings.ipynb`).
-2. Click the **Kernel Selector** in the top-right corner.
-3. Select **Python Environments...**
-4. Choose **Python (langchain-project-venv)**.
