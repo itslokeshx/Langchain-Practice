@@ -1,6 +1,6 @@
-# LangChain RAG Fundamentals 🧠🤖
+# LangChain Practice 🧠🤖
 
-Welcome to the **LangChain RAG Fundamentals** repository! This is a structured, hands-on playground designed for practicing and mastering the core concepts of Retrieval-Augmented Generation (RAG) pipelines using Python and LangChain.
+Welcome to the **LangChain Practice** repository! This is a structured, hands-on playground designed for practicing and mastering the core concepts of Retrieval-Augmented Generation (RAG) pipelines using Python and LangChain.
 
 The repository is organized sequentially, taking you step-by-step from raw data ingestion to vector storage and retrieval.
 
@@ -34,22 +34,12 @@ The repository is split into clean, sequentially numbered modules:
 
 ---
 
-## 🚀 Suggested Repository Names
-
-If you are publishing this to GitHub/GitLab, here are some clean name suggestions:
-1. `langchain-rag-fundamentals` (Recommended)
-2. `rag-learning-pathway`
-3. `langchain-rag-playground`
-4. `learn-rag-step-by-step`
-
----
-
 ## 🛠️ Getting Started
 
 ### 1. Clone & Navigate
 ```bash
 git clone <your-repo-url>
-cd langchain-rag-fundamentals
+cd langchain-practice
 ```
 
 ### 2. Set Up Virtual Environment
