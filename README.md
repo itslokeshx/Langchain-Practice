@@ -21,7 +21,6 @@ The repository is organized sequentially, taking you step-by-step from raw data 
 │   └── 02_faiss_db.ipynb
 ├── data/                        # Shared sample datasets and documents
 │   ├── attention.pdf            # "Attention Is All You Need" research paper
-│   ├── records.xml              # Structured XML test data
 │   └── speech.txt               # Sample historical text speeches
 ```
 
