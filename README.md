@@ -185,8 +185,3 @@ GROQ_API_KEY=gsk_...
 
 ---
 
-<div align="center">
-
-Made with 🦜 and a lot of ☕
-
-</div>
