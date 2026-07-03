@@ -1,4 +1,4 @@
-# LangChain — RAG Fundamentals 🧠📚
+# RAG Fundamentals 🧠📚
 
 > A structured, hands-on notebook workspace for mastering the **core building blocks of Retrieval-Augmented Generation (RAG)** with LangChain — from raw document loading all the way to querying a vector database.
 
@@ -18,21 +18,22 @@
 ## 🗂️ Workspace Structure
 
 ```text
-Langchain/
-├── .env.example                         # API key template
-├── requirements.txt                     # All dependencies
+01_rag_fundamentals/
+├── .env.example                              # API key template
+├── requirements.txt                          # All dependencies
 ├── data/
-│   └── speech.txt                       # Sample text for experiments
-├── 01_Data_Ingestion/
-│   └── data_ingestion.ipynb             # Document loading techniques
-├── 02_Text_Splitting/
+│   ├── speech.txt                            # Sample text for experiments
+│   └── attention.pdf                         # "Attention Is All You Need" paper
+├── 01_data_ingestion/
+│   └── data_ingestion.ipynb                  # Document loading techniques
+├── 02_text_splitting/
 │   ├── 01_recursive_character_splitter.ipynb
 │   ├── 02_json_splitter.ipynb
 │   └── 03_html_header_splitter.ipynb
-├── 03_Embeddings/
+├── 03_embeddings/
 │   ├── 01_huggingface_embeddings.ipynb
 │   └── 02_ollama_embeddings.ipynb
-└── 04_Vector_Databases/
+└── 04_vector_databases/
     ├── 01_chroma_db.ipynb
     └── 02_faiss_db.ipynb
 ```
@@ -86,10 +87,10 @@ Then edit `.env`:
 HF_TOKEN=your_huggingface_token_here
 ```
 
-> **Note:** A Hugging Face token is only needed for gated models on the Hub. Public embedding models like `all-MiniLM-L6-v2` work without authentication.
+> **Note:** A Hugging Face token is only needed for gated models. Public models like `all-MiniLM-L6-v2` work without authentication.
 
-| Provider | Where to get key |
-|----------|-----------------|
+| Provider | Where to Get |
+|----------|-------------|
 | Hugging Face | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
 
 ### 3. Run the notebooks
@@ -103,7 +104,7 @@ Open any `.ipynb` in **VS Code** or **Jupyter** and run cells top to bottom.
 Follow this sequence for the most logical progression through RAG concepts:
 
 ```
-01_Data_Ingestion  →  02_Text_Splitting  →  03_Embeddings  →  04_Vector_Databases
+01_data_ingestion  →  02_text_splitting  →  03_embeddings  →  04_vector_databases
 ```
 
 Each stage feeds directly into the next — you load data, split it, embed it, then store and retrieve it.
@@ -129,16 +130,16 @@ python-dotenv         # .env file loading
 ```
 Raw Documents
       │
-      ▼  [01_Data_Ingestion]
+      ▼  [01_data_ingestion]
   LangChain Documents
       │
-      ▼  [02_Text_Splitting]
+      ▼  [02_text_splitting]
   Chunks (smaller Document objects)
       │
-      ▼  [03_Embeddings]
+      ▼  [03_embeddings]
   Dense Vectors
       │
-      ▼  [04_Vector_Databases]
+      ▼  [04_vector_databases]
   Vector Store  ──── Query ──▶  Relevant Chunks ──▶  LLM ──▶  Answer
 ```
 
@@ -147,5 +148,6 @@ Raw Documents
 ## 🗒️ Notes
 
 - Use `data/speech.txt` as the included sample text to run all experiments without needing external data.
-- Ollama notebooks require the Ollama daemon to be running (`ollama serve`) and the relevant model pulled locally.
+- `data/attention.pdf` ("Attention Is All You Need") is available for PDF-based ingestion experiments.
+- Ollama notebooks require the Ollama daemon running (`ollama serve`) and the relevant model pulled locally.
 - ChromaDB and FAISS both persist data locally — you can reuse stored embeddings across sessions.

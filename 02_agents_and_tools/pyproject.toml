@@ -1,0 +1,9 @@
+[project]
+name = "langchain-agents-and-tools"
+version = "0.1.0"
+description = "LangChain 1.x agents, tools, messages, structured output & middleware notebooks"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+]
